@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatternExercisesV1.ConsoleApp;
 
-internal class Employee
+public class Employee
 {
 	private double _salary;
 
@@ -25,5 +25,21 @@ internal class Employee
 		}
 	}
 
+	public Employee(int id, string? firstName, string? lastName, double salary)
+	{
+		Id = id;
+		FirstName = firstName;
+		LastName = lastName;
+		Salary = salary;
+	}
 
+
+	public override string ToString()
+	{
+		return 
+			$"Identifiant : {Id}" +
+			$"\nPrénom : {FirstName}" +
+			$"\nNom : {LastName}" +
+			$"\nSalaire : {Salary}\n";
+	}
 }
